@@ -2,13 +2,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome("/Users/agnessrancsik/Selenium/Masodikora_1030/chromedriver")
+driver = webdriver.Chrome("/Users/agnessrancsik/Selenium/Masodikora_1030/test/chromedriver")
 driver.get("http://learnwebservices.com/locations/server")
 
 
 class TestCreatelocation():
   def setup_method(self, method):
-    self.driver = webdriver.Chrome()
+    self.driver = webdriver.Chrome("/Users/agnessrancsik/Selenium/Masodikora_1030/test/chromedriver")
     self.vars = {}
 
   def test_createlocation(self):
@@ -18,4 +18,4 @@ class TestCreatelocation():
     self.driver.find_element(By.ID, "nameInput").send_keys("a")
     self.driver.find_element(By.ID, "coordsInput").send_keys("1,1")
     self.driver.find_element(By.CSS_SELECTOR, ".btn-primary").click()
-    assert self.driver.find_element(By.CSS_SELECTOR, ".alert").text == "Location has saved"
+    assert self.driver.find_element(By.CSS_SELECTOR, ".alert").text == "Location has saved."
