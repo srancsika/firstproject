@@ -2,13 +2,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome("/Users/agnessrancsik/Selenium/Masodikora_1030/test/chromedriver")
+driver = webdriver.Chrome("/Users/agnessrancsik/Selenium/Masodikora_1030/tests/chromedriver")
 driver.get("http://learnwebservices.com/locations/server")
 
 
 class TestCreatelocation():
   def setup_method(self, method):
-    self.driver = webdriver.Chrome("/Users/agnessrancsik/Selenium/Masodikora_1030/test/chromedriver")
+    self.driver = webdriver.Chrome("/Users/agnessrancsik/Selenium/Masodikora_1030/tests/chromedriver")
     self.vars = {}
 
   def test_createlocation(self):
