@@ -11,9 +11,6 @@ class TestCreatelocation():
     self.driver = webdriver.Chrome()
     self.vars = {}
 
-  def teardown_method(self, method):
-    self.driver.quit()
-
   def test_createlocation(self):
     self.driver.get("http://www.learnwebservices.com/locations/server")
     self.driver.set_window_size(1226, 731)
@@ -22,5 +19,3 @@ class TestCreatelocation():
     self.driver.find_element(By.ID, "coordsInput").send_keys("1,1")
     self.driver.find_element(By.CSS_SELECTOR, ".btn-primary").click()
     assert self.driver.find_element(By.CSS_SELECTOR, ".alert").text == "Location has saved"
-
-driver.close()
