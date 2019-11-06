@@ -7,12 +7,21 @@
 </head>
 <body>
     <h1> Számológép </h1>
-    <p> Ez egy nagyon ronda számológép</p>
-       <form>
-        <input name="a" id="elsoAdat"/>
-        + <input name="b" id="masodikAdat"/>
-        <input type="submit" id="gomb" value="Számolj!"/>
+    <p> Ez egy nagyon ronda számológép, és még nem is működik.</p>
+    <div>
+        <form>
+            <div>
+                        <input name="a-" id="a-input"/>
+                + <input name="b" id="b-input"/>
+                   <input type="submit" id="submit-button" value="Számolj!"/>
+            </div>
         </form>
+    </div>
+    <div>
+           Eredmény:
+           <input name="c" id="result-input" readonly="true"/>
+    </div>
     </p>
+    <script src="calc.js"></script>
 </body>
 </html>
