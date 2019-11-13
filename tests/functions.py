@@ -32,11 +32,11 @@ def print_coords_by_id(id):
     print(coords)
 
 #print("Írj egy függvényt, mely a paraméterül kapott értékekkel (név, koordináta kitölti az űrlapot, és felvesz egy kedvenc helyet!")
-def create_location(name, id):
+def create_location(name, coords):
     driver.get("http://www.learnwebservices.com/locations/server")
     driver.find_element(By.ID, "nameInput").click()
     driver.find_element(By.ID, "nameInput").send_keys(name)
-    driver.find_element(By.ID, "coordsInput").send_keys(id)
+    driver.find_element(By.ID, "coordsInput").send_keys(coords)
     driver.find_element(By.CSS_SELECTOR, ".btn-primary").click()
     assert driver.find_element(By.CSS_SELECTOR, ".alert").text == "Location has saved."
     return(print_id_by_name(name))
@@ -48,4 +48,4 @@ driver.get("http://www.learnwebservices.com/locations/server")
 print_coords_by_name("Törökszentmiklós")
 print_name_by_id(8734)
 print_coords_by_id(8734)
-create_location("Kukac", "1,1")
+create_location("Kukacos", "1,1")
